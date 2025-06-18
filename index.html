@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Scaling Natural-Language Graph-Based Test Time Compute for Automated Theorem Proving.">
+  <meta name="keywords" content="Automated Theorem Proving, ">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scaling Natural-Language Graph-Based Test Time Compute for Automated Theorem Proving</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="./static/css/leaderboard.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/algoverse.png">
+
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://algoverseairesearch.org">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Scaling Natural-Language Graph-Based Test Time Compute for Automated Theorem Proving</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/vinli0921/">Vincent Li</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/tim-knappe/">Tim Knappe</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/yule-fu-1230ml/">Yule Fu</a><sup>3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/zhu-kevin1/">Kevin Zhu</a><sup>4</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/han-kevin/">Kevin Han</a><sup>4</sup>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Boston University</span>
+            <span class="author-block"><sup>2</sup>Provadis School of International Management & Technology</span>
+            <span class="author-block"><sup>3</sup>Duke University</span>
+            <a href="https://algoverseairesearch.org" class="author-block"><sup>4</sup>Algoverse AI Research</a>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2503.11657"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2503.11657"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/vinli0921/Automating-Math-Proof"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://github.com/vinli0921/Automating-Math-Proof/tree/main/Graph_Creation"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div id="teaser" height="100%" style="display: flex; justify-content: center;">
+        <img height="50%" width="50%" src="./static/images/KG-VisualTransparent.png">
+      </div>
+      <h2 class="subtitle has-text-centered">
+        Turning Foundation Models into natural language proof reasoners.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Large language models have demonstrated remarkable capabilities in natural language processing tasks requiring multi-step logical reasoning capabilities, such as automated theorem proving. However, challenges persist within theorem proving, such as the identification of key mathematical concepts, understanding their interrelationships, and formalizing proofs correctly within natural language. We present KG-prover, a novel framework that leverages knowledge graphs mined from reputable mathematical texts to augment general-purpose LLMs to construct and formalize mathematical proofs -- reasoning through the problem completely in natural language before outputting into a formal proof. We also study the effects of scaling graph-based, test-time compute using KG-Prover, demonstrating significant performance improvements over baselines across multiple datasets. General-purpose models improve up to 21% on minif2f when combined with KG-Prover, with consistent improvements ranging from 2–11% on the ProofNet, miniF2F-test, and MUSTARD datasets. This work provides a promising approach augmenting natural language proof reasoning with knowledge graphs without the need for additional finetuning.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Using the KG Prover</h2>
+        <div class="publication-video">
+          <img src="./static/images/diagram.jpeg" />
+        </div>
+        We integrate Node retrieval based on an interconnected knowledge graph into our proof system at inference time. Before generating a proof, we inject the most similar nodes into the context, then verify the proof using Lean. If the verification is unsuccessful, we grant the model the chance to traverse the graph deeper.
+      </div>
+    </div>
+    <br>
+    <p>
+      Using the KG-Prover improves performance across all benchmarks over the baselines and Retrieval Augmented Generation. 
+      <br />
+      Using Knowledge Graphs with expert models like TheoremLlama and evaluating with pass@3 can yield performance comparable to running 128 rounds of generation without a Knowledge Graph.
+    </p>
+
+    <br>
+
+    <div class="table-container">
+      <table class="table is-striped is-bordered is-hoverable is-fullwidth has-text-centered">
+        <thead>
+          <tr>
+            <th>Dataset</th>
+            <th>Claude 3.5</th>
+            <th>Deepseek R1</th>
+            <th>Llama 3.1 8B</th>
+            <th>Llama 3.3 70B</th>
+            <th>GPT-4o</th>
+            <th>o1-mini</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>ProofNet</th>
+            <td>4.84%</td>
+            <td>5.38%</td>
+            <td>4.30%</td>
+            <td>4.30%</td>
+            <td>6.45%</td>
+            <td><strong>6.99%</strong></td>
+          </tr>
+          <tr>
+            <th>miniF2F</th>
+            <td>31.15%</td>
+            <td>28.28%</td>
+            <td><strong>31.97%</strong></td>
+            <td>30.74%</td>
+            <td>30.74%</td>
+            <td>30.74%</td>
+          </tr>
+          <tr>
+            <th>MUSTARD</th>
+            <td>30.00%</td>
+            <td>27.00%</td>
+            <td>27.60%</td>
+            <td>32.50%</td>
+            <td>30.00%</td>
+            <td><strong>34.00%</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <ul>
+  <p>As visualized, using graphs consistently outperforms baseline proof systems and over Retrieval Augmented Generation. Performance gains of the KG-Prover ranged from 2-11\% across different models</p>
+</ul>
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Animation. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Scaling compute</h2>
+
+        <!-- Interpolating. -->
+        <h3 class="title is-4">Maximizing Graph coverage & Proof attempts</h3>
+        <div class="content has-text-justified">
+          <p>
+            Scaling knowledge graphs for formal reasoning proves to be an effective strategy when combined with self-consistency, iterative refinement and deep graph traversal.
+          </p>
+            <img src="./static/images/MaxScaling.png">
+          <p>Scaling KG-Prover depth significantly boosts performance across all benchmarks, with the most notable gains in the first three scaling steps.</p>
+          <p>o4-mini reaches an accuracy on miniF2F of over <b>52%</b> and <b>60%</b> on mustardsauce <b>without ANY additional training.</b></p>
+        </div>
+
+        <br/>
+        <!--/ Interpolating. -->
+
+        <!-- Re-rendering. -->
+        <h3 class="title is-4">Using the KG-Prover & creating a knowledge graph</h3>
+        <div class="content has-text-justified">
+          <p>
+            Using the KG-Prover is as easy as running the knowledge graph creation script, plugging in the models and starting the evaluation. 
+            We encourage you to use our knowledge graph and build your own with minimum overhead, based of our <a href="https://github.com/vinli0921/Automating-Math-Proof/tree/main/" target="_blank">GitHub repository.</a>
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <video id="replay-video"
+                 controls
+                 preload
+                 playsinline
+                 width="75%"
+                 >
+            <source src="./static/videos/code_example"
+                    type="video/mp4">
+          </video>
+        </div>
+        <!--/ Re-rendering. -->
+
+      </div>
+    </div>
+    <!--/ Animation. -->
+
+
+    <!-- Concurrent Work. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Related Links</h2>
+
+        <div class="content has-text-justified">
+<p>
+  A number of recent works have made significant advances in learning-based formal theorem proving.
+</p>
+
+<p>
+  <a href="https://arxiv.org/abs/2408.08152">DeepSeek-Prover-V1.5</a> combines proof-assistant feedback with Monte Carlo tree search, achieving state-of-the-art results on miniF2F and ProofNet through reward-driven exploration.
+</p>
+
+<p>
+  <a href="https://arxiv.org/abs/2306.15626">LeanDojo’s ReProver</a> uses retrieval-augmented generation to guide LLM-based proof search in Lean, improving both premise selection and sample efficiency.
+</p>
+
+<p>
+  <a href="https://arxiv.org/abs/2205.11491">HyperTree</a> introduces structured AlphaZero-style search to boost proof success in formal systems like Metamath and Lean.
+</p>
+
+<p>
+  <a href="https://arxiv.org/abs/2502.00212">STP</a> casts proving as a self-play game between a conjecturer and prover, enabling open-ended learning through generated training data.
+</p>
+
+<p>
+  <a href="https://arxiv.org/abs/2407.03203">TheoremLlama</a> shows that general-purpose LLMs can be fine-tuned into capable Lean provers using bootstrapped datasets and curriculum learning.
+</p>
+        </div>
+      </div>
+    </div>
+    <!--/ Concurrent Work. -->
+
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@misc{li2025automatingmathematicalproofgeneration,
+      title={Automating Mathematical Proof Generation Using Large Language Model Agents and Knowledge Graphs}, 
+      author={Vincent Li and Yule Fu and Tim Knappe and Kevin Han and Kevin Zhu},
+      year={2025},
+      eprint={2503.11657},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2503.11657}, 
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background: #f9f9f9;
+}
+.dataset-selector {
+  margin-bottom: 20px;
+}
+.dataset-selector label {
+  margin-right: 15px;
+  padding: 8px 12px;
+  background-color: #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.dataset-selector input[type="radio"] {
+  display: none;
+}
+.dataset-selector input[type="radio"]:checked + span {
+  background-color: #4285f4;
+  color: white;
+}
+.leaderboard {
+  display: none;
+}
+.visible {
+  display: block;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 0 !important;
+}
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+th {
+  background-color: #eee;
+}
+.scrollable-tbody {
+  max-height: 300px;
+  overflow-y: auto;
+  display: block;
+}
+.scrollable-tbody table {
+  width: 100%;
+}
