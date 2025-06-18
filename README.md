@@ -4,11 +4,14 @@ This is the repository that contains source code for the [KG-Prover website](htt
 
 If you find KG-Prover useful for your work please cite:
 ```
-@article{park2021nerfies
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
+@misc{li2025automatingmathematicalproofgeneration,
+      title={Automating Mathematical Proof Generation Using Large Language Model Agents and Knowledge Graphs}, 
+      author={Vincent Li and Yule Fu and Tim Knappe and Kevin Han and Kevin Zhu},
+      year={2025},
+      eprint={2503.11657},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2503.11657}, 
 }
 ```
 
